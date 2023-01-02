@@ -1,0 +1,45 @@
+body {
+  color: white;
+}
+
+body {
+  text-align: center;
+}
+
+.rect {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+  -webkit-animation-name: sk-bouncedelay;
+          animation-name: sk-bouncedelay;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.paused {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  from {
+    transform: scale(0);
+    background-color: black;
+  }
+  to {
+    transform: scale(1);
+    background-color: green;
+  }
+}
+
+@keyframes sk-bouncedelay {
+  from {
+    transform: scale(0);
+    background-color: black;
+  }
+  to {
+    transform: scale(1);
+    background-color: green;
+  }
+}/*# sourceMappingURL=loader.css.map */

@@ -1,0 +1,31 @@
+$content:(
+    right:translateX(8px),
+    left:translateX(-8px),
+    up:translateY(8px),
+    down:translateY(-8px),
+);
+
+@each $key, $value in $content{
+    .appear.#{$key}{
+        & .item{
+            opacity: 0;
+            transform: $value;
+            transition: all 0.8s;
+        }
+    }
+}
+.appear{
+    & .item{
+        opacity: 0;
+        transition: all 0.8s;
+    }
+    &.inview .item{
+        opacity: 1;
+        transform: none;
+        @for $i from 1 through 10 {
+            &:nth-child(#{$i}){
+                transition-delay: $i * 0.2s;
+            }
+        }
+    }
+}

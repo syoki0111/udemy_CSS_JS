@@ -1,0 +1,9 @@
+body{
+    color: white;
+}
+@mixin animation(
+  $name,
+){
+  animation-name:$name;
+  animation-duration: 1s;
+}
